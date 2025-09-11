@@ -1,0 +1,94 @@
+{
+    "@@locale": "en",
+  
+    "auth_loginTitle": "Login",
+    "auth_signupTitle": "Create Account",
+    "auth_verifyEmailTitle": "Verify Email",
+    "auth_resetPasswordTitle": "Reset Password",
+    "auth_forgotPasswordTitle": "Forgot Password?",
+  
+    "common_emailLabel": "Email Address",
+    "common_emailHint": "Enter your email",
+    "common_passwordLabel": "Password",
+    "common_passwordHint": "Enter your password",
+    "common_confirmPasswordLabel": "Confirm Password",
+    "common_confirmPasswordHint": "Enter your password again",
+    "common_fullNameLabel": "Full Name",
+    "common_fullNameHint": "Enter your full name",
+    "common_submitButton": "Submit",
+    "common_or": "OR",
+    "common_name": "name",
+    "common_loading": "Loading...",
+    "common_next": "Next",
+
+    "login_title": "Login",
+    "login_loginButton": "Login",
+    "login_forgotPasswordLink": "Forgot Password?",
+    "login_noAccountPrompt": "Don't have an account?",
+    "login_signupLink": "Sign Up",
+    "login_socialLoginPrompt": "Sign in with",
+    "login_errorInvalidCredentials": "Invalid email or password.",
+    "login_errorNetwork": "Network error. Please try again.",
+    "login_errorUnknown": "An unexpected error occurred. Please try again.",
+  
+    "signup_title": "Sign Up",
+    "signup_signupButton": "Sign Up",
+    "signup_haveAccountPrompt": "Already have an account?",
+    "signup_loginLink": "Login",
+    "signup_socialSignupPrompt": "Sign up with",
+    "signup_agreeTerms": "By signing up, you agree to our Terms of Service and Privacy Policy.",
+    
+  
+    "otp_instruction": "Enter the 6-digit code sent to {email}",
+    "otp_textFieldLabel": "OTP Code",
+    "otp_textFieldHint": "Enter OTP",
+    "otp_verifyButton": "Verify",
+    "otp_didNotReceiveCode": "Didn't receive the code?",
+    "otp_resendCodeLink": "Resend Code",
+    "otp_resendCodeTimer": "Resend code in {seconds}s",
+    "otp_successMessage": "Email verified successfully!",
+    "otp_errorMessageInvalidCode": "Invalid or expired OTP code.",
+    "otp_errorMessageNetwork": "Network error. Please try again.",
+    "otp_errorMessageUnknown": "An unexpected error occurred during verification.",
+  
+    "resetPassword_requestInstruction": "Enter your email address to receive password reset instructions.",
+    "resetPassword_sendLinkButton": "Send Reset Link",
+    "resetPassword_backToLoginLink": "Back to Login",
+    "resetPassword_requestSuccess": "Password reset link sent to {email}. Please check your inbox (and spam folder).",
+    "resetPassword_errorEmailNotFound": "No account found with this email address.",
+    "resetPassword_errorNetwork": "Network error. Please try again.",
+    "resetPassword_errorUnknown": "An unexpected error occurred. Please try again.",
+    "resetPassword_setNewPasswordTitle": "Set New Password",
+    "resetPassword_newPasswordLabel": "New Password",
+    "resetPassword_newPasswordHint": "Enter your new password",
+    "resetPassword_confirmNewPasswordLabel": "Confirm New Password",
+    "resetPassword_confirmNewPasswordHint": "Enter your new password again",
+    "resetPassword_updatePasswordButton": "Update Password",
+    "resetPassword_updateSuccess": "Password updated successfully!",
+    "resetPassword_updateErrorInvalidToken": "Invalid or expired reset token.",
+    "resetPassword_updateErrorPasswordMismatch": "Passwords do not match.",
+    "resetPassword_updateErrorWeakPassword": "New password is too weak.",
+  
+    "social_divider":"Or login using",
+    "social_signInWithGoogle": "Sign in with Google",
+    "social_signInWithFacebook": "Sign in with Facebook",
+    "social_signUpWithGoogle": "Sign up with Google",
+    "social_signUpWithFacebook": "Sign up with Facebook",
+    "social_errorCancelled": "Social login cancelled.",
+    "social_errorNetwork": "Network error during social login.",
+    "social_errorUnknown": "An unknown error occurred during social login.",
+  
+    "validation_required": "This field is required.",
+    "validation_invalidEmail": "Please enter a valid email address.",
+    "validation_passwordTooShort": "Password must be at least {minLength} characters long.",
+    "@validation_passwordTooShort": {
+      "description": "Password length validation error message",
+      "placeholders": {
+        "minLength": {
+          "type": "int",
+          "example": "8"
+        }
+      }
+    },
+    "validation_passwordsDoNotMatch": "Passwords do not match."
+  }

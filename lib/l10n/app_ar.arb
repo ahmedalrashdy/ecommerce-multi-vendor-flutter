@@ -1,0 +1,94 @@
+{
+    "@@locale": "ar",
+  
+    "auth_loginTitle": "تسجيل الدخول",
+    "auth_signupTitle": "إنشاء حساب",
+    "auth_verifyEmailTitle": "التحقق من البريد الإلكتروني",
+    "auth_resetPasswordTitle": "إعادة تعيين كلمة المرور",
+    "auth_forgotPasswordTitle": "هل نسيت كلمة المرور؟",
+  
+    "common_emailLabel": "البريد الإلكتروني",
+    "common_emailHint": "أدخل بريدك الإلكتروني",
+    "common_passwordLabel": "كلمة المرور",
+    "common_passwordHint": "أدخل كلمة المرور",
+    "common_confirmPasswordLabel": "تأكيد كلمة المرور",
+    "common_confirmPasswordHint": "أدخل كلمة المرور مرة أخرى",
+    "common_fullNameLabel": "الاسم الكامل",
+    "common_fullNameHint": "أدخل اسمك الكامل",
+    "common_submitButton": "إرسال",
+    "common_or": "أو",
+    "common_name": "الاسم",
+    "common_next": "التالي",
+    "common_loading": "جاري التحميل...",
+  
+    "login_title": "تسجيل الدخول",
+    "login_loginButton": "تسجيل الدخول",
+    "login_forgotPasswordLink": "هل نسيت كلمة المرور؟",
+    "login_noAccountPrompt": "ليس لديك حساب؟",
+    "login_signupLink": "إنشاء حساب",
+    "login_socialLoginPrompt": "تسجيل الدخول باستخدام",
+    "login_errorInvalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+    "login_errorNetwork": "خطأ في الشبكة. يرجى المحاولة مرة أخرى.",
+    "login_errorUnknown": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.",
+  
+    "signup_title": "إنشاء حساب",
+    "signup_signupButton": "إنشاء حساب",
+    "signup_haveAccountPrompt": "هل لديك حساب بالفعل؟",
+    "signup_loginLink": "تسجيل الدخول",
+    "signup_socialSignupPrompt": "إنشاء حساب باستخدام",
+    "signup_agreeTerms": "بالتسجيل، فإنك توافق على شروط الخدمة وسياسة الخصوصية الخاصة بنا.",
+
+  
+    "otp_instruction": "أدخل الرمز المكون من 6 أرقام المرسل إلى {email}",
+    "otp_textFieldLabel": "رمز OTP",
+    "otp_textFieldHint": "أدخل رمز OTP",
+    "otp_verifyButton": "تحقق",
+    "otp_didNotReceiveCode": "لم تستلم الرمز؟",
+    "otp_resendCodeLink": "إعادة إرسال الرمز",
+    "otp_resendCodeTimer": "إعادة إرسال الرمز خلال {seconds} ثانية",
+    "otp_successMessage": "تم التحقق من البريد الإلكتروني بنجاح!",
+    "otp_errorMessageInvalidCode": "رمز OTP غير صالح أو منتهي الصلاحية.",
+    "otp_errorMessageNetwork": "خطأ في الشبكة. يرجى المحاولة مرة أخرى.",
+    "otp_errorMessageUnknown": "حدث خطأ غير متوقع أثناء التحقق.",
+  
+    "resetPassword_requestInstruction": "أدخل عنوان بريدك الإلكتروني لتلقي تعليمات إعادة تعيين كلمة المرور.",
+    "resetPassword_sendLinkButton": "إرسال رابط إعادة التعيين",
+    "resetPassword_backToLoginLink": "العودة إلى تسجيل الدخول",
+    "resetPassword_requestSuccess": "تم إرسال رابط إعادة تعيين كلمة المرور إلى {email}. يرجى التحقق من صندوق الوارد (والمجلدات غير المرغوب فيها).",
+    "resetPassword_errorEmailNotFound": "لم يتم العثور على حساب بعنوان البريد الإلكتروني هذا.",
+    "resetPassword_errorNetwork": "خطأ في الشبكة. يرجى المحاولة مرة أخرى.",
+    "resetPassword_errorUnknown": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.",
+    "resetPassword_setNewPasswordTitle": "تعيين كلمة مرور جديدة",
+    "resetPassword_newPasswordLabel": "كلمة المرور الجديدة",
+    "resetPassword_newPasswordHint": "أدخل كلمة المرور الجديدة",
+    "resetPassword_confirmNewPasswordLabel": "تأكيد كلمة المرور الجديدة",
+    "resetPassword_confirmNewPasswordHint": "أدخل كلمة المرور الجديدة مرة أخرى",
+    "resetPassword_updatePasswordButton": "تحديث كلمة المرور",
+    "resetPassword_updateSuccess": "تم تحديث كلمة المرور بنجاح!",
+    "resetPassword_updateErrorInvalidToken": "رمز إعادة التعيين غير صالح أو منتهي الصلاحية.",
+    "resetPassword_updateErrorPasswordMismatch": "كلمتا المرور غير متطابقتين.",
+    "resetPassword_updateErrorWeakPassword": "كلمة المرور الجديدة ضعيفة جدًا.",
+
+    "social_divider":"أو سجل دخولك عبر",
+    "social_signInWithGoogle": "تسجيل الدخول باستخدام Google",
+    "social_signInWithFacebook": "تسجيل الدخول باستخدام Facebook",
+    "social_signUpWithGoogle": "إنشاء حساب باستخدام Google",
+    "social_signUpWithFacebook": "إنشاء حساب باستخدام Facebook",
+    "social_errorCancelled": "تم إلغاء تسجيل الدخول الاجتماعي.",
+    "social_errorNetwork": "خطأ في الشبكة أثناء تسجيل الدخول الاجتماعي.",
+    "social_errorUnknown": "حدث خطأ غير معروف أثناء تسجيل الدخول الاجتماعي.",
+  
+    "validation_required": "هذا الحقل مطلوب.",
+    "validation_invalidEmail": "الرجاء إدخال عنوان بريد إلكتروني صالح.",
+    "validation_passwordTooShort": "يجب أن تتكون كلمة المرور من {minLength} أحرف على الأقل.",
+    "@validation_passwordTooShort": {
+      "description": "رسالة خطأ التحقق من طول كلمة المرور",
+      "placeholders": {
+        "minLength": {
+          "type": "int",
+          "example": "8"
+        }
+      }
+    },
+    "validation_passwordsDoNotMatch": "كلمتا المرور غير متطابقتين."
+  }
