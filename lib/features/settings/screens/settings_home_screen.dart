@@ -30,6 +30,18 @@ class SettingsHomeScreen extends StatelessWidget {
             onTap: () => context.push('/settings/account'),
           ),
           SettingsListTile(
+            icon: Icons.location_on_outlined,
+            title: 'عناوين التوصيل',
+            subtitle: "إدارة عناوين التوصيل",
+            onTap: () => context.pushNamed(AppRoutes.userAddressesName),
+          ),
+          SettingsListTile(
+            icon: Icons.display_settings_outlined,
+            title: 'المحتوى والعرض',
+            subtitle: 'الوضع المظلم, توفير البيانات, حجم الخط',
+            onTap: () => context.push('/settings/display'),
+          ),
+          SettingsListTile(
             icon: Icons.help_outline,
             title: 'المساعدة والدعم',
             subtitle: 'مركز المساعدة, الإبلاغ عن مشكلة',

@@ -33,8 +33,12 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
           label: 'الرئيسية',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart), // أيقونة السلة
+          icon: Icon(Icons.shopping_cart_outlined), // أيقونة السلة
           label: 'السلة',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.favorite_border_outlined), // أيقونة السلة
+          label: 'المفضلة',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.receipt_long), // أيقونة الفواتير/الطلبات

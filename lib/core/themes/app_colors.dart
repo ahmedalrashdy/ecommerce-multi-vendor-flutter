@@ -92,8 +92,7 @@ class DarkAppColors extends AppColors {
 
   // ألوان الخلفية والأسطح (داكنة)
   @override
-  final Color background = const Color(
-      0xFF121212); // أسود داكن جداً (قريب من الماتيريال ديزاين دارك)
+  final Color background = const Color(0xFF121212);
   @override
   final Color surface = const Color(
       0xFF1E1E1E); // رمادي داكن للبطاقات والمربعات (أفتح قليلاً من الخلفية)
