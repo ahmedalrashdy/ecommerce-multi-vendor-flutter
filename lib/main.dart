@@ -1,9 +1,7 @@
-import 'package:ecommerce/core/helpers/app_exception.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:get/get.dart';
 import 'package:logger/logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:ecommerce/core/blocs/auth/auth_events.dart';
@@ -26,7 +24,6 @@ void main() async {
     ),
   );
 
-  Get.put(logger, permanent: true);
   WidgetsFlutterBinding.ensureInitialized();
 
   Bloc.observer = MyBlocObserver();

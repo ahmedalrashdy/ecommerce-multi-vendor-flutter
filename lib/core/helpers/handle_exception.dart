@@ -1,10 +1,10 @@
 import 'package:ecommerce/core/enums/enums.dart';
+import 'package:ecommerce/core/helpers/AppHelper.dart';
 import 'package:ecommerce/core/helpers/app_exception.dart';
-import 'package:get/get.dart';
 import 'package:logger/logger.dart';
 
 mixin ExceptionHandler {
-  final Logger logger = Get.find();
+  final Logger logger = AppHelper.logger;
 
   Future<T> handleExceptionAsync2<T>(
     Future<T> Function() action,
