@@ -1,7 +1,11 @@
+import 'package:ecommerce/features/cart/screens/cart_screen.dart';
+import 'package:ecommerce/features/search/screens/search_screen.dart';
+import 'package:ecommerce/features/stores/screens/store_screen.dart';
+import 'package:ecommerce/features/wishlist/screens/wishlist_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:ecommerce/app.dart';
+import 'package:ecommerce/main_screen.dart';
 import 'package:ecommerce/core/consts/simple_cache_keys.dart';
 import 'package:ecommerce/core/helpers/AppHelper.dart';
 import 'core/blocs/auth/auth_notifiyer.dart';
@@ -9,7 +13,12 @@ import 'core/blocs/auth/auth_state.dart';
 import 'core/consts/app_routes.dart';
 import 'error_screen.dart';
 import 'features/auth/auths_routes.dart';
-import 'features/main/screens/main_screen.dart';
+import 'features/main/screens/home_screen.dart';
+import 'features/main/screens/offer_details_screen.dart';
+import 'features/orders/orders_routes.dart';
+import 'features/stores/screens/stores_list_screen.dart';
+import 'features/products/screens/product_details_screen.dart';
+import 'features/products/screens/products_list_screen.dart';
 import 'features/onboarding/views/onboarding_screen.dart';
 import 'features/settings/settings_routes.dart';
 
@@ -81,7 +90,7 @@ class AppRouter {
         StatefulShellRoute.indexedStack(
           builder: (BuildContext context, GoRouterState state,
               StatefulNavigationShell navigationShell) {
-            return ScaffoldWithNavBar(navigationShell: navigationShell);
+            return MainScreen(navigationShell: navigationShell);
           },
           branches: <StatefulShellBranch>[
             StatefulShellBranch(
@@ -90,7 +99,33 @@ class AppRouter {
                   path: AppRoutes.mainScreen,
                   name: AppRoutes.mainScreenName,
                   builder: (BuildContext context, GoRouterState state) =>
-                      MainScreen(),
+                      HomeScreen(),
+                  routes: [
+                    GoRoute(
+                      path: AppRoutes.homeScreen,
+                      name: AppRoutes.homeScreenName,
+                      builder: (BuildContext context, GoRouterState state) =>
+                          const HomeScreen(),
+                    ),
+                    GoRoute(
+                      path: '${AppRoutes.offerDetailsScreen}/:offerId',
+                      name: AppRoutes.offerDetailsScreenName,
+                      builder: (BuildContext context, GoRouterState state) {
+                        final offerId = state.pathParameters['offerId'] ?? '';
+                        return OfferDetailsScreen(offerId: offerId);
+                      },
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            StatefulShellBranch(
+              routes: <RouteBase>[
+                GoRoute(
+                  path: AppRoutes.cartScreen,
+                  name: AppRoutes.cartScreenName,
+                  builder: (BuildContext context, GoRouterState state) =>
+                      CartScreen(),
                   routes: [],
                 ),
               ],
@@ -101,9 +136,7 @@ class AppRouter {
                   path: AppRoutes.wishlist,
                   name: AppRoutes.wishlistName,
                   builder: (BuildContext context, GoRouterState state) =>
-                      Container(
-                    child: Text("Cuom"),
-                  ),
+                      WishlistScreen(),
                   routes: [],
                 ),
               ],
@@ -111,8 +144,8 @@ class AppRouter {
             StatefulShellBranch(
               routes: <RouteBase>[
                 GoRoute(
-                  path: AppRoutes.ordersScreen,
-                  name: AppRoutes.ordersName,
+                  path: AppRoutes.orderList,
+                  name: AppRoutes.orderListName,
                   builder: (BuildContext context, GoRouterState state) =>
                       Container(
                     child: Text("chats"),
@@ -134,6 +167,43 @@ class AppRouter {
           ],
         ),
         ...settingsRoutes,
+        ...ordersRoutes,
+        GoRoute(
+          path: AppRoutes.storesListScreen,
+          name: AppRoutes.storesListScreenName,
+          builder: (BuildContext context, GoRouterState state) =>
+              const StoresListScreen(),
+        ),
+        GoRoute(
+          path: AppRoutes.storeDetailsScreen,
+          name: AppRoutes.storeDetailsScreenName,
+          builder: (BuildContext context, GoRouterState state) {
+            String storeId = state.pathParameters['storeId']!;
+            return StoreScreen(storeId: int.parse(storeId));
+          },
+        ),
+        GoRoute(
+          path: AppRoutes.productsListScreen,
+          name: AppRoutes.productsListScreenName,
+          builder: (BuildContext context, GoRouterState state) =>
+              const ProductListScreen(),
+        ),
+        GoRoute(
+          path: '${AppRoutes.productDetailsScreen}/:productId',
+          name: AppRoutes.productDetailsScreenName,
+          builder: (BuildContext context, GoRouterState state) {
+            final productId = int.parse(state.pathParameters['productId']!);
+            return ProductDetailScreen(
+              productId: productId,
+            );
+          },
+        ),
+        GoRoute(
+          path: AppRoutes.searchScreen,
+          name: AppRoutes.searchScreenName,
+          builder: (BuildContext context, GoRouterState state) =>
+              SearchScreen(),
+        ),
         GoRoute(
           path: AppRoutes.onBoarding,
           name: AppRoutes.onBoardingName,

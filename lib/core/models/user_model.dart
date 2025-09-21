@@ -1,28 +1,24 @@
 import 'package:equatable/equatable.dart';
 
 class UserModel extends Equatable {
-  final String? invitationId;
   final String email;
   final String? name;
   final String? bio;
-  final String? profile;
-  final String? profileBg;
-  final String? profile_picture;
-  final String? cover_photo;
+  final String? profilePicture;
   final int id;
-  final bool isProfileComplete;
+  final bool isVendor;
+  final bool isSuperUser;
+  final bool isDelivery;
 
   const UserModel({
     required this.email,
     this.name,
     this.bio,
-    this.profile,
-    this.profileBg,
+    this.profilePicture,
     required this.id,
-    this.profile_picture,
-    this.cover_photo,
-    this.invitationId,
-    required this.isProfileComplete,
+    required this.isDelivery,
+    required this.isSuperUser,
+    required this.isVendor,
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
@@ -31,10 +27,10 @@ class UserModel extends Equatable {
       id: json['id'],
       name: json['name'],
       bio: json['bio'],
-      profile_picture: json['profile'],
-      cover_photo: json['profile_bg'],
-      invitationId: json['invitation_id'],
-      isProfileComplete: json['is_profile_complete'] ?? false,
+      profilePicture: json['profile_picture'],
+      isVendor: json['is_vendor'] ?? false,
+      isSuperUser: json['is_superuser'] ?? false,
+      isDelivery: json['is_delivery'] ?? false,
     );
   }
 
@@ -43,10 +39,11 @@ class UserModel extends Equatable {
       'email': email,
       'name': name,
       'bio': bio,
-      'profile': profile,
-      'profile_bg': profileBg,
+      'profile_picture': profilePicture,
       'id': id,
-      'is_profile_complete': isProfileComplete,
+      'is_delivery': isDelivery,
+      'is_vendor': isVendor,
+      'is_superuser': isSuperUser,
     };
   }
 
@@ -54,24 +51,21 @@ class UserModel extends Equatable {
     int? id,
     String? email,
     String? name,
-    DateTime? createdAt,
-    DateTime? lastLogin,
-    bool? isStaff,
-    bool? isActive,
-    bool? verified,
     String? bio,
-    String? profile,
-    String? profileBg,
-    bool? isProfileComplete,
+    String? profilePicture,
+    bool? isVendor,
+    bool? isSuperUser,
+    bool? isDelivery,
   }) {
     return UserModel(
       id: id ?? this.id,
       email: email ?? this.email,
       name: name ?? this.name,
       bio: bio ?? this.bio,
-      profile_picture: profile ?? this.profile_picture,
-      cover_photo: profileBg ?? this.cover_photo,
-      isProfileComplete: isProfileComplete ?? this.isProfileComplete,
+      profilePicture: profilePicture ?? this.profilePicture,
+      isDelivery: isDelivery ?? this.isDelivery,
+      isVendor: isVendor ?? this.isVendor,
+      isSuperUser: isSuperUser ?? this.isSuperUser,
     );
   }
 
@@ -80,11 +74,10 @@ class UserModel extends Equatable {
         id,
         email,
         name,
-        id,
         bio,
-        profile_picture,
-        cover_photo,
-        id,
-        isProfileComplete,
+        profilePicture,
+        isVendor,
+        isSuperUser,
+        isDelivery,
       ];
 }

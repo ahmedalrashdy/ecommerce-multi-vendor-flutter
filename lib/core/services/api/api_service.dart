@@ -70,7 +70,7 @@ class APIService {
     }
   }
 
-  Future<dynamic> patch(String endpoint, dynamic data) async {
+  Future<dynamic> patch(String endpoint, {Object? data}) async {
     try {
       final response = await _dio.patch(
         '$endpoint',

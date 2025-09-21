@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:logger/logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:ecommerce/core/blocs/auth/auth_events.dart';
 import 'package:ecommerce/core/enums/enums.dart';
@@ -16,6 +18,12 @@ import 'package:provider/provider.dart';
 
 late SharedPreferences appSharedPref;
 void main() async {
+  final Logger logger = Logger(
+    printer: PrettyPrinter(
+      colors: true,
+    ),
+  );
+
   WidgetsFlutterBinding.ensureInitialized();
 
   Bloc.observer = MyBlocObserver();
@@ -26,12 +34,14 @@ void main() async {
   await dotenv.load(fileName: ".env");
   AppHelper.authBloc..add(AuthAppStarted());
 
-  runApp(MultiBlocProvider(
-    providers: [
-      BlocProvider(create: (ctx) => LocaleCubit()),
-      BlocProvider(create: (ctx) => ThemeCubit()),
-    ],
-    child: const MyApp(),
+  runApp(ProviderScope(
+    child: MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (ctx) => LocaleCubit()),
+        BlocProvider(create: (ctx) => ThemeCubit()),
+      ],
+      child: const MyApp(),
+    ),
   ));
 }
 

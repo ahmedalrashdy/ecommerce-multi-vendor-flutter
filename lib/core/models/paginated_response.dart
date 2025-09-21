@@ -17,4 +17,16 @@ class PaginatedResponse<T> {
       results: (json['results'] as List<dynamic>).map(fromJsonT).toList(),
     );
   }
+
+  PaginatedResponse<T> copyWith({
+    String? next,
+    String? previous,
+    List<T>? results,
+  }) {
+    return PaginatedResponse<T>(
+      next: next ?? this.next,
+      previous: previous ?? this.previous,
+      results: results ?? this.results,
+    );
+  }
 }

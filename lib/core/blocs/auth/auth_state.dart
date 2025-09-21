@@ -14,12 +14,11 @@ class AuthLoading extends AuthState {}
 
 class AuthAuthenticated extends AuthState {
   final AuthModel authModel;
-  bool get isProfileComplete => authModel.user.isProfileComplete;
 
   const AuthAuthenticated({required this.authModel});
 
   @override
-  List<Object?> get props => [authModel, isProfileComplete];
+  List<Object?> get props => [authModel];
 }
 
 class AuthUnauthenticated extends AuthState {}

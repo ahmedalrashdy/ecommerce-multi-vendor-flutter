@@ -8,19 +8,19 @@ import 'core/blocs/auth/auth_state.dart';
 import 'core/consts/app_routes.dart';
 import 'core/widgets/custom_confirm_diolog.dart';
 
-class ScaffoldWithNavBar extends StatefulWidget {
+class MainScreen extends StatefulWidget {
   final StatefulNavigationShell navigationShell;
 
-  const ScaffoldWithNavBar({
+  const MainScreen({
     Key? key,
     required this.navigationShell,
   }) : super(key: key);
 
   @override
-  State<ScaffoldWithNavBar> createState() => _ScaffoldWithNavBarState();
+  State<MainScreen> createState() => _MainScreenState();
 }
 
-class _ScaffoldWithNavBarState extends State<ScaffoldWithNavBar> {
+class _MainScreenState extends State<MainScreen> {
   void _onItemTapped(int index) {
     widget.navigationShell.goBranch(
       index,
